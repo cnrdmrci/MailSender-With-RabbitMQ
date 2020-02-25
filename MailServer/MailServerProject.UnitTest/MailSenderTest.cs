@@ -24,7 +24,7 @@ namespace MailServerProject.UnitTest
             _smtpAyarlayan = new Mock<ISmtpAyarlayan>(MockBehavior.Strict);
             _mailKontrolcu = new Mock<IMailKontrolcu>(MockBehavior.Loose);
 
-            _mailGonderen = new MailGonderen(_mailIslemcisi,_smtpAyarlayan, _veritabaniIslemcisi, _mailKontrolcu);
+            _mailGonderen = new MailGonderen(_mailIslemcisi.Object,_smtpAyarlayan.Object, _veritabaniIslemcisi.Object, _mailKontrolcu.Object);
 
             _mailBilgi = new MailBilgi()
             {
