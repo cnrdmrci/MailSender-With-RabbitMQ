@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailServerProject", "MailServerProject\MailServerProject.csproj", "{1B4F7A5F-BA61-4BF8-A386-93E0622BACC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MailServerProject", "MailServerProject\MailServerProject.csproj", "{1B4F7A5F-BA61-4BF8-A386-93E0622BACC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailServerProject.UnitTest", "MailServerProject.UnitTest\MailServerProject.UnitTest.csproj", "{A373E1D3-8097-483F-B00C-F663F6253E7F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{1B4F7A5F-BA61-4BF8-A386-93E0622BACC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B4F7A5F-BA61-4BF8-A386-93E0622BACC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B4F7A5F-BA61-4BF8-A386-93E0622BACC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A373E1D3-8097-483F-B00C-F663F6253E7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A373E1D3-8097-483F-B00C-F663F6253E7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A373E1D3-8097-483F-B00C-F663F6253E7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A373E1D3-8097-483F-B00C-F663F6253E7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

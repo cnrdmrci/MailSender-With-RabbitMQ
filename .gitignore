@@ -1,9 +1,12 @@
 # Visual Studio cache/options directory
 MailClient/MailClientProject/.vs
 MailServer/MailServerProject/.vs
+MailServer/.vs
 
 # MSBuild Binary
 MailClient/MailClientProject/bin
 MailClient/MailClientProject/obj
 MailServer/MailServerProject/bin
 MailServer/MailServerProject/obj
+MailServer/MailServerProject.UnitTest/bin
+MailServer/MailServerProject.UnitTest/obj
