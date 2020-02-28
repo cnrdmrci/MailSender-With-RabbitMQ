@@ -87,7 +87,7 @@ namespace MailServerProject.UnitTest
 
             //then
             if(mailGonderimSonuc.Basarili)
-                _veritabaniIslemcisi.Verify(x=>x.BasariliGonderimKaydet(true,_mailBilgi,It.IsAny<string>()));
+                _veritabaniIslemcisi.Verify(x=>x.BasariliGonderimKaydet(_mailBilgi));
         }
 
         [Test]
@@ -102,7 +102,7 @@ namespace MailServerProject.UnitTest
 
             //then
             if (!mailGonderimSonuc.Basarili)
-                _veritabaniIslemcisi.Verify(x => x.HataliGonderimKaydet(false,_mailBilgiHatali, It.IsAny<string>()));
+                _veritabaniIslemcisi.Verify(x => x.HataliGonderimKaydet(_mailBilgiHatali, It.IsAny<string>()));
         }
 
         [Test]
@@ -116,7 +116,7 @@ namespace MailServerProject.UnitTest
             _mailGonderen.Gonder(_mailBilgi);
 
             //then
-            _veritabaniIslemcisi.Verify(x=>x.HataliGonderimKaydet(false,_mailBilgi,It.IsAny<string>()));
+            _veritabaniIslemcisi.Verify(x=>x.HataliGonderimKaydet(_mailBilgi,It.IsAny<string>()));
         }
     }
 }
