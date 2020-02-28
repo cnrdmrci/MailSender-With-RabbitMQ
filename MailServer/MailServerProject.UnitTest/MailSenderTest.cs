@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using MailServerProject.Abstract;
 using Moq;
 using NUnit.Framework;
 
@@ -9,7 +10,7 @@ namespace MailServerProject.UnitTest
     [TestFixture]
     public class MailSenderTest
     {
-        private Mock<IVeriTabaniIslemcisi> _veritabaniIslemcisi;
+        private Mock<IVeritabaniIslemcisi> _veritabaniIslemcisi;
         private Mock<IMailIslemcisi> _mailIslemcisi;
         private Mock<ISmtpAyarlayan> _smtpAyarlayan;
         private Mock<IMailKontrolcu> _mailKontrolcu;
@@ -20,7 +21,7 @@ namespace MailServerProject.UnitTest
         [SetUp]
         public void Init()
         {
-            _veritabaniIslemcisi = new Mock<IVeriTabaniIslemcisi>(MockBehavior.Strict);
+            _veritabaniIslemcisi = new Mock<IVeritabaniIslemcisi>(MockBehavior.Strict);
             _smtpAyarlayan = new Mock<ISmtpAyarlayan>(MockBehavior.Strict);
             _mailKontrolcu = new Mock<IMailKontrolcu>(MockBehavior.Loose);
 
