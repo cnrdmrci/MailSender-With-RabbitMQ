@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 using MailServerProject.Abstract;
+using MailServerProject.Concrete;
+using MailServerProject.Model;
 using Moq;
 using NUnit.Framework;
 
 namespace MailServerProject.UnitTest
 {
     [TestFixture]
-    public class MailSenderTest
+    public class MailGonderenTest
     {
         private Mock<IVeritabaniIslemcisi> _veritabaniIslemcisi;
         private Mock<IMailIslemcisi> _mailIslemcisi;
@@ -29,18 +31,18 @@ namespace MailServerProject.UnitTest
 
             _mailBilgi = new MailBilgi()
             {
-                Kime : "caner@adayazilim.com",
-                Kimden : "test@adayazilim.com",
-                Konu : "test konu",
-                Icerik : "test icerik"
+                Kime =  "caner@adayazilim.com",
+                Kimden = "test@adayazilim.com",
+                Konu = "test konu",
+                Icerik = "test icerik"
             };
 
             _mailBilgiHatali = new MailBilgi()
             {
-                Kime : "c@1",
-                Kimden : "test@adayazilim.com",
-                Konu : "test konu",
-                Icerik : "test icerik"
+                Kime = "c@1",
+                Kimden = "test@adayazilim.com",
+                Konu = "test konu",
+                Icerik = "test icerik"
             };
 
         }
