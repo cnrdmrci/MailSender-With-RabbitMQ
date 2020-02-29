@@ -26,21 +26,20 @@ namespace MailServerProject.UnitTest
             _veritabaniIslemcisi = new Mock<IVeritabaniIslemcisi>(MockBehavior.Strict);
             _smtpAyarlayan = new Mock<ISmtpAyarlayan>(MockBehavior.Strict);
             _mailKontrolcu = new Mock<IMailKontrolcu>(MockBehavior.Loose);
+            _mailIslemcisi = new Mock<IMailIslemcisi>(MockBehavior.Loose);
 
-            _mailGonderen = new MailGonderen(_mailIslemcisi.Object,_smtpAyarlayan.Object, _veritabaniIslemcisi.Object, _mailKontrolcu.Object);
+            _mailGonderen = new MailGonderen(_mailIslemcisi.Object, _smtpAyarlayan.Object, _veritabaniIslemcisi.Object, _mailKontrolcu.Object);
 
             _mailBilgi = new MailBilgi()
             {
-                Kime =  "caner@adayazilim.com",
-                Kimden = "test@adayazilim.com",
+                GonderilecekEpostaAdresleri = new List<string>() { "caner@adayazilim.com" },
                 Konu = "test konu",
-                Icerik = "test icerik"
+                Icerik = "test icerik",
             };
 
             _mailBilgiHatali = new MailBilgi()
             {
-                Kime = "c@1",
-                Kimden = "test@adayazilim.com",
+                GonderilecekEpostaAdresleri = new List<string>() { "caneradayazilim.com" },
                 Konu = "test konu",
                 Icerik = "test icerik"
             };
@@ -58,7 +57,7 @@ namespace MailServerProject.UnitTest
             _mailGonderen.Gonder(_mailBilgiHatali);
 
             //then
-            _mailKontrolcu.Verify(x=>x.MailAdresiKontrolEt(_mailBilgiHatali));
+            _mailKontrolcu.Verify(x => x.MailAdresiKontrolEt(_mailBilgiHatali));
 
         }
 
@@ -80,14 +79,13 @@ namespace MailServerProject.UnitTest
         {
             //given
             _mailKontrolcu.Setup(x => x.MailAdresiKontrolEt(_mailBilgi)).Returns(true);
-            _mailIslemcisi.Setup(x => x.MailGonderimiYap(_mailBilgi)).Returns(true);
 
             //when
             MailGonderimSonuc mailGonderimSonuc = _mailGonderen.Gonder(_mailBilgi);
 
             //then
-            if(mailGonderimSonuc.Basarili)
-                _veritabaniIslemcisi.Verify(x=>x.BasariliGonderimKaydet(_mailBilgi));
+            if (mailGonderimSonuc.Basarili)
+                _veritabaniIslemcisi.Verify(x => x.BasariliGonderimKaydet(_mailBilgi));
         }
 
         [Test]
@@ -95,7 +93,6 @@ namespace MailServerProject.UnitTest
         {
             //given
             _mailKontrolcu.Setup(x => x.MailAdresiKontrolEt(_mailBilgiHatali)).Returns(true);
-            _mailIslemcisi.Setup(x => x.MailGonderimiYap(_mailBilgiHatali)).Returns(false);
 
             //when
             MailGonderimSonuc mailGonderimSonuc = _mailGonderen.Gonder(_mailBilgiHatali);
@@ -110,13 +107,13 @@ namespace MailServerProject.UnitTest
         {
             Exception hata = new Exception();
             //given
-            _mailIslemcisi.Setup(x => x.MailGonderimiYap(_mailBilgi)).Throws(hata);
+            _mailIslemcisi.Setup(x => x.MailGonderimiYap(_mailBilgi, _smtpAyarlayan.Object)).Throws(hata);
 
             //when
             _mailGonderen.Gonder(_mailBilgi);
 
             //then
-            _veritabaniIslemcisi.Verify(x=>x.HataliGonderimKaydet(_mailBilgi,It.IsAny<string>()));
+            _veritabaniIslemcisi.Verify(x => x.HataliGonderimKaydet(_mailBilgi, It.IsAny<string>()));
         }
     }
 }
