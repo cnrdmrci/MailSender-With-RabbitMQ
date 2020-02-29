@@ -2,7 +2,7 @@
 
 namespace MailSender.Abstract
 {
-    internal interface IMailIslemcisi
+    public interface IMailIslemcisi
     {
         void MailGonderimiYap(MailBilgi mailBilgi,ISmtpAyarlayan smtpAyarlayan);
     }

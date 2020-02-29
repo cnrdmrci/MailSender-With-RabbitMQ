@@ -5,7 +5,7 @@ using MailSender.Model;
 
 namespace MailSender.Concrete
 {
-    internal class MailGonderen
+    public class MailGonderen
     {
         private IMailIslemcisi _mailIslemcisi;
         private ISmtpAyarlayan _smtpAyarlayan;

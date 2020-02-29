@@ -2,7 +2,7 @@
 
 namespace MailSender.Abstract
 {
-    internal interface IVeritabaniIslemcisi
+    public interface IVeritabaniIslemcisi
     {
         void BasariliGonderimKaydet(MailBilgi mailBilgi);
         void HataliGonderimKaydet(MailBilgi mailBilgi,string mesaj);
