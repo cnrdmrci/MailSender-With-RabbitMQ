@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using MailServerProject.Model;
+﻿using MailSender.Model;
 
-namespace MailServerProject.Abstract
+namespace MailSender.Abstract
 {
     public interface IVeritabaniIslemcisi
     {

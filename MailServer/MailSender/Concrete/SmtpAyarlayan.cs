@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net;
+﻿using System.Net;
 using System.Net.Mail;
-using System.Text;
-using MailServerProject.Abstract;
-using MailServerProject.Model;
+using MailSender.Abstract;
+using MailSender.Model;
 
-namespace MailServerProject.Concrete
+namespace MailSender.Concrete
 {
     public class SmtpAyarlayan :ISmtpAyarlayan
     {
@@ -15,8 +12,8 @@ namespace MailServerProject.Concrete
             //Veritabanindan al.
             //Singleton olarak tasarla.
             SmtpAyar smtpAyar = new SmtpAyar();
-            smtpAyar.Host = "";
-            smtpAyar.Port = 0;
+            smtpAyar.Host = "smtp.gmail.com";
+            smtpAyar.Port = 587;
             smtpAyar.KullaniciAdi = "";
             smtpAyar.Sifre = "";
             smtpAyar.SslKullan = true;
@@ -33,7 +30,10 @@ namespace MailServerProject.Concrete
             smtpClient.Host = smtpAyar.Host;
             smtpClient.Port = smtpAyar.Port;
             smtpClient.EnableSsl = smtpAyar.SslKullan;
+            smtpClient.UseDefaultCredentials = false;
             smtpClient.Credentials = new NetworkCredential(smtpAyar.KullaniciAdi,smtpAyar.Sifre);
+            smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+            //smtpClient.Timeout = 3000;
 
             return smtpClient;
         }

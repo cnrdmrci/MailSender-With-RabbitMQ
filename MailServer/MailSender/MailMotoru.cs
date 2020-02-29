@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using MailServerProject.Model;
+﻿using MailSender.Model;
 
-namespace MailServerProject.Concrete
+namespace MailSender.Concrete
 {
     public class MailMotoru
     {

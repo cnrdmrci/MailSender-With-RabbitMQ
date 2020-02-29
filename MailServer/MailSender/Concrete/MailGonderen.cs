@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using MailServerProject.Abstract;
-using MailServerProject.Model;
+using MailSender.Abstract;
+using MailSender.Model;
 
-namespace MailServerProject.Concrete
+namespace MailSender.Concrete
 {
     public class MailGonderen
     {

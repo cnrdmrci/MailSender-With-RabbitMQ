@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MailServerProject.Model
+﻿namespace MailSender.Model
 {
     public class SmtpAyar
     {

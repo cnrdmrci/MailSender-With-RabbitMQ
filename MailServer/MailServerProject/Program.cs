@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Net.Mail;
 
 namespace MailServerProject
 {
@@ -6,7 +8,11 @@ namespace MailServerProject
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Mail gönderiliyor.");
+
+            
+
+            Console.WriteLine("Mail gönderildi.");
         }
     }
 }

@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using MailServerProject.Abstract;
+﻿using System.Collections.Generic;
 
-namespace MailServerProject.Model
+namespace MailSender.Model
 {
     public class MailBilgi
     {

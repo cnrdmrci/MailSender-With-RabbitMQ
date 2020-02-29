@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net;
-using System.Net.Mail;
-using System.Text;
-using MailServerProject.Abstract;
-using MailServerProject.Model;
+﻿using System.Net.Mail;
+using MailSender.Abstract;
+using MailSender.Model;
 
-namespace MailServerProject.Concrete
+namespace MailSender.Concrete
 {
     public class MailIslemcisi : IMailIslemcisi
     {

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using MailServerProject.Abstract;
-using MailServerProject.Concrete;
-using MailServerProject.Model;
+using MailSender.Abstract;
+using MailSender.Concrete;
+using MailSender.Model;
 using Moq;
 using NUnit.Framework;
 
