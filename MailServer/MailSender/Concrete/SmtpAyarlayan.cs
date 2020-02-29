@@ -7,19 +7,22 @@ namespace MailSender.Concrete
 {
     internal class SmtpAyarlayan :ISmtpAyarlayan
     {
+        private SmtpAyar _smtpAyar;
         private SmtpAyar smtpAyarGetir()
         {
             //Veritabanindan al.
             //Singleton olarak tasarla.
-            SmtpAyar smtpAyar = new SmtpAyar();
-            smtpAyar.Host = "smtp.gmail.com";
-            smtpAyar.Port = 587;
-            smtpAyar.KullaniciAdi = "";
-            smtpAyar.Sifre = "";
-            smtpAyar.SslKullan = true;
+            _smtpAyar = new SmtpAyar();
+            _smtpAyar.Host = "smtp.gmail.com";
+            _smtpAyar.Port = 587;
+            _smtpAyar.KullaniciAdi = "";
+            _smtpAyar.Sifre = "";
+            _smtpAyar.SslKullan = true;
+            _smtpAyar.Unvan = "test unvan";
 
-            return smtpAyar;
+            return _smtpAyar;
         }
+
 
 
         public SmtpClient SmtpClientBilgiGetir()
@@ -36,6 +39,16 @@ namespace MailSender.Concrete
             //smtpClient.Timeout = 3000;
 
             return smtpClient;
+        }
+
+        public string GonderenMailBilgisiGetir()
+        {
+            return _smtpAyar.KullaniciAdi;
+        }
+
+        public string GonderenUnvanBilgisiGetir()
+        {
+            return _smtpAyar.Unvan;
         }
     }
 }

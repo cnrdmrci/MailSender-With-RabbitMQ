@@ -12,7 +12,7 @@ namespace MailSender.Concrete
             MailMessage ePosta = new MailMessage();
 
             //mail gonderecek hesap.
-            ePosta.From = new MailAddress(mailBilgi.Kimden,mailBilgi.KimdenUnvan); 
+            ePosta.From = new MailAddress(smtpAyarlayan.GonderenMailBilgisiGetir(),smtpAyarlayan.GonderenUnvanBilgisiGetir()); 
 
             //mail gonderilecek e-posta adresleri.
             mailBilgi.GonderilecekEpostaAdresleri.ForEach(x =>{ePosta.To.Add(x);});
