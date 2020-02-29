@@ -10,3 +10,6 @@ MailServer/MailServerProject/bin
 MailServer/MailServerProject/obj
 MailServer/MailServerProject.UnitTest/bin
 MailServer/MailServerProject.UnitTest/obj
+MailServer/MailSender/obj
+MailServer/MailSender/bin
+
