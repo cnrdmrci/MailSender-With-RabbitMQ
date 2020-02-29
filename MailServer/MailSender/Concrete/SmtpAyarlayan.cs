@@ -5,7 +5,7 @@ using MailSender.Model;
 
 namespace MailSender.Concrete
 {
-    public class SmtpAyarlayan :ISmtpAyarlayan
+    internal class SmtpAyarlayan :ISmtpAyarlayan
     {
         private SmtpAyar smtpAyarGetir()
         {

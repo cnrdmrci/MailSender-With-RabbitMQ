@@ -1,6 +1,6 @@
 ﻿namespace MailSender.Model
 {
-    public class SmtpAyar
+    internal class SmtpAyar
     {
         public string Host { get; set; }
         public int Port { get; set; }

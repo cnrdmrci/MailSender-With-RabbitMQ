@@ -2,7 +2,7 @@
 
 namespace MailSender.Abstract
 {
-    public interface IMailKontrolcu
+    internal interface IMailKontrolcu
     {
         bool MailAdresiKontrolEt(MailBilgi mailBilgi);
     }

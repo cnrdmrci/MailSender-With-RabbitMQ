@@ -3,7 +3,7 @@ using MailSender.Model;
 
 namespace MailSender.Concrete
 {
-    public class MailKontrolcu : IMailKontrolcu
+    internal class MailKontrolcu : IMailKontrolcu
     {
         public bool MailAdresiKontrolEt(MailBilgi mailBilgi)
         {

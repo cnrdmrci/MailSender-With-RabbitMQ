@@ -4,7 +4,7 @@ using MailSender.Model;
 
 namespace MailSender.Concrete
 {
-    public class MailIslemcisi : IMailIslemcisi
+    internal class MailIslemcisi : IMailIslemcisi
     {
         public void MailGonderimiYap(MailBilgi mailBilgi, ISmtpAyarlayan smtpAyarlayan)
         {

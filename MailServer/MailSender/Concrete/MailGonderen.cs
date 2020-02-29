@@ -5,13 +5,13 @@ using MailSender.Model;
 
 namespace MailSender.Concrete
 {
-    public class MailGonderen
+    internal class MailGonderen
     {
         private IMailIslemcisi _mailIslemcisi;
         private ISmtpAyarlayan _smtpAyarlayan;
         private IVeritabaniIslemcisi _veritabaniIslemcisi;
         private IMailKontrolcu _mailKontrolcu;
-        public MailGonderen(IMailIslemcisi mailIslemcisi, ISmtpAyarlayan smtpAyarlayan, IVeritabaniIslemcisi veritabaniIslemcisi, IMailKontrolcu mailKontrolcu)
+        internal MailGonderen(IMailIslemcisi mailIslemcisi, ISmtpAyarlayan smtpAyarlayan, IVeritabaniIslemcisi veritabaniIslemcisi, IMailKontrolcu mailKontrolcu)
         {
             _mailIslemcisi = mailIslemcisi;
             _smtpAyarlayan = smtpAyarlayan;

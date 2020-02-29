@@ -2,7 +2,7 @@
 
 namespace MailSender.Abstract
 {
-    public interface ISmtpAyarlayan
+    internal interface ISmtpAyarlayan
     {
         SmtpClient SmtpClientBilgiGetir();
     }
