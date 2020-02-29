@@ -9,6 +9,7 @@ namespace MailServerProject.Model
     {
         public string Kime { get; set; }
         public string Kimden { get; set; }
+        public string KimdenUnvan { get; set; }
         public string Konu { get; set; }
         public string Icerik { get; set; }
         public List<string> EkDosya { get; set; }
