@@ -10,7 +10,7 @@ namespace MailServerProject.Concrete
     {
         public bool MailAdresiKontrolEt(MailBilgi mailBilgi)
         {
-            throw new NotImplementedException();
+            return true; //mail gecerli var sayalim. kontroller eklenecek.
         }
     }
 }
