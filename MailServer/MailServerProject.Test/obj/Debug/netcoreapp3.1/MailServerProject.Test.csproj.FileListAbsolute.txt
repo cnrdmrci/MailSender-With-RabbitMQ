@@ -89,3 +89,10 @@ C:\Git Repositories\MailSender-With-RabbitMQ\MailServer\MailServerProject.Test\o
 C:\Git Repositories\MailSender-With-RabbitMQ\MailServer\MailServerProject.Test\obj\Debug\netcoreapp3.1\MailServerProject.Test.AssemblyInfoInputs.cache
 C:\Git Repositories\MailSender-With-RabbitMQ\MailServer\MailServerProject.Test\obj\Debug\netcoreapp3.1\MailServerProject.Test.AssemblyInfo.cs
 C:\Git Repositories\MailSender-With-RabbitMQ\MailServer\MailServerProject.Test\obj\Debug\netcoreapp3.1\MailServerProject.Test.csproj.CopyComplete
+C:\Git Repositories\MailSender-With-RabbitMQ\MailServer\MailServerProject.Test\bin\Debug\netcoreapp3.1\MailServerProject.Test.pdb
+C:\Git Repositories\MailSender-With-RabbitMQ\MailServer\MailServerProject.Test\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Git Repositories\MailSender-With-RabbitMQ\MailServer\MailServerProject.Test\bin\Debug\netcoreapp3.1\Moq.dll
+C:\Git Repositories\MailSender-With-RabbitMQ\MailServer\MailServerProject.Test\bin\Debug\netcoreapp3.1\MailSender.dll
+C:\Git Repositories\MailSender-With-RabbitMQ\MailServer\MailServerProject.Test\bin\Debug\netcoreapp3.1\MailSender.pdb
+C:\Git Repositories\MailSender-With-RabbitMQ\MailServer\MailServerProject.Test\obj\Debug\netcoreapp3.1\MailServerProject.Test.dll
+C:\Git Repositories\MailSender-With-RabbitMQ\MailServer\MailServerProject.Test\obj\Debug\netcoreapp3.1\MailServerProject.Test.pdb
