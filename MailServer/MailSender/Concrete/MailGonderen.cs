@@ -57,6 +57,10 @@ namespace MailSender.Concrete
                 _veritabaniIslemcisi.HataliGonderimKaydet(mailBilgi, "Mail adresi hatalı, lütfen kontrol edin.");
                 mailGonderimSonuc.Basarili = false;
             }
+            else
+            {
+                mailGonderimSonuc.Basarili = true;
+            }
 
             return mailGonderimSonuc;
         }
