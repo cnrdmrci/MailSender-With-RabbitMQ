@@ -13,18 +13,35 @@ namespace MailServerProject.Concrete
         public void MailGonderimiYap(MailBilgi mailBilgi, ISmtpAyarlayan smtpAyarlayan)
         {
             SmtpClient smtpClient = smtpAyarlayan.SmtpClientBilgiGetir();
-
             MailMessage ePosta = new MailMessage();
-            ePosta.From = new MailAddress(mailBilgi.Kimden,mailBilgi.KimdenUnvan); //mail gonderecek hesap.
-            ePosta.To.Add(mailBilgi.Kime); //mail gonderilecek adres.
-            //ePosta.CC.Add(""); //Bilgi olarak eklenecek mail adreslerini tutar.
-            //ePosta.Bcc.Add(""); //Gizli olarak eklenecek mail adreslerini turar.
-            ePosta.Subject = mailBilgi.Konu; //mailin konusu.
-            ePosta.IsBodyHtml = true; //mail icerigi html olarak gonderilsin.
-            ePosta.Body = mailBilgi.Icerik; //mail icerigi.
-            ePosta.Attachments.Clear(); // ekleri temizledik.
-            //ePosta.Attachments.Add(new Attachment("")); // mail ek dosya ekledik.
 
+            //mail gonderecek hesap.
+            ePosta.From = new MailAddress(mailBilgi.Kimden,mailBilgi.KimdenUnvan); 
+
+            //mail gonderilecek e-posta adresleri.
+            mailBilgi.GonderilecekEpostaAdresleri.ForEach(x =>{ePosta.To.Add(x);});
+
+            //Bilgilendirme olarak eklenecek mail adresleri.
+            mailBilgi.CcEpostaAdresleri.ForEach(x =>{ePosta.CC.Add(x);});
+
+            //Gizli olarak eklenecek mail adresleri.
+            mailBilgi.BccEpostaAdresleri.ForEach(x =>{ePosta.Bcc.Add(x);});
+
+            //mailin konusu.
+            ePosta.Subject = mailBilgi.Konu;
+
+            //mail icerigi html olarak gonderilsin.
+            ePosta.IsBodyHtml = true;
+
+            //mail icerigi.
+            ePosta.Body = mailBilgi.Icerik;
+            // ekleri temizledik.
+            ePosta.Attachments.Clear();
+
+            //mail ek dosyalari eklendi.
+            mailBilgi.EklenecekDosyaAdresleri.ForEach(x =>{ePosta.Attachments.Add(new Attachment(x));});
+
+            //Mail gonderiliyor.
             smtpClient.Send(ePosta);
         }
     }
