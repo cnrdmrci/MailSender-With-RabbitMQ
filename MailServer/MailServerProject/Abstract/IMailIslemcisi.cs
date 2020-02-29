@@ -7,6 +7,6 @@ namespace MailServerProject.Abstract
 {
     public interface IMailIslemcisi
     {
-        bool MailGonderimiYap(MailBilgi mailBilgi);
+        void MailGonderimiYap(MailBilgi mailBilgi,ISmtpAyarlayan smtpAyarlayan);
     }
 }
