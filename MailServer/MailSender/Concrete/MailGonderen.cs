@@ -11,7 +11,7 @@ namespace MailSender.Concrete
         private ISmtpAyarlayan _smtpAyarlayan;
         private IVeritabaniIslemcisi _veritabaniIslemcisi;
         private IMailKontrolcu _mailKontrolcu;
-        internal MailGonderen(IMailIslemcisi mailIslemcisi, ISmtpAyarlayan smtpAyarlayan, IVeritabaniIslemcisi veritabaniIslemcisi, IMailKontrolcu mailKontrolcu)
+        public MailGonderen(IMailIslemcisi mailIslemcisi, ISmtpAyarlayan smtpAyarlayan, IVeritabaniIslemcisi veritabaniIslemcisi, IMailKontrolcu mailKontrolcu)
         {
             _mailIslemcisi = mailIslemcisi;
             _smtpAyarlayan = smtpAyarlayan;
