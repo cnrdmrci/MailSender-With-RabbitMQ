@@ -2,6 +2,7 @@
 MailClient/MailClientProject/.vs
 MailServer/MailServerProject/.vs
 MailServer/.vs
+MailClient/.vs
 
 # MSBuild Binary
 MailClient/MailClientProject/bin
