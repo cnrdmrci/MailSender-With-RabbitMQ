@@ -18,7 +18,7 @@ namespace MailSender.Concrete
             _smtpAyar.KullaniciAdi = "";
             _smtpAyar.Sifre = "";
             _smtpAyar.SslKullan = true;
-            _smtpAyar.Unvan = "test unvan";
+            _smtpAyar.Unvan = "Test Kişisi";
 
             return _smtpAyar;
         }
