@@ -18,10 +18,10 @@ namespace MailSender.Concrete
             mailBilgi.GonderilecekEpostaAdresleri.ForEach(x =>{ePosta.To.Add(x);});
 
             //Bilgilendirme olarak eklenecek mail adresleri.
-            mailBilgi.CcEpostaAdresleri.ForEach(x =>{ePosta.CC.Add(x);});
+            mailBilgi.CcEpostaAdresleri?.ForEach(x =>{ePosta.CC.Add(x);});
 
             //Gizli olarak eklenecek mail adresleri.
-            mailBilgi.BccEpostaAdresleri.ForEach(x =>{ePosta.Bcc.Add(x);});
+            mailBilgi.BccEpostaAdresleri?.ForEach(x =>{ePosta.Bcc.Add(x);});
 
             //mailin konusu.
             ePosta.Subject = mailBilgi.Konu;
@@ -35,7 +35,7 @@ namespace MailSender.Concrete
             ePosta.Attachments.Clear();
 
             //mail ek dosyalari eklendi.
-            mailBilgi.EklenecekDosyaAdresleri.ForEach(x =>{ePosta.Attachments.Add(new Attachment(x));});
+            mailBilgi.EklenecekDosyaAdresleri?.ForEach(x =>{ePosta.Attachments.Add(new Attachment(x));});
 
             //Mail gonderiliyor.
             smtpClient.Send(ePosta);
