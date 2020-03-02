@@ -1,7 +1,7 @@
 # RabbitMQ Genel Bilgi
 
 ### Proje Bilgisi
-RabbitMq ile mail istemcisinden mail sunucusuna mail gönderim uygulaması hazırlandı.
+RabbitMq ile mail istemcisinden mail sunucusuna, mail bilgisini göndererek, mail sunucusunun mail gönderim işlemi yapması sağlandı.
 
 ### Mantık
 Publisher veriyi direk olarak queue'ya değil exchange üzerinden iletir. Publisher, queue'yi bilmemektedir. Mesaj exchange üzerinden routing keye göre queue'ya iletilir. Ardından sırasıyla Consumer'e iletilir.
