@@ -33,9 +33,12 @@ namespace MailServerProject
 
             MailBilgi mailBilgi = JsonConvert.DeserializeObject<MailBilgi>(message);
 
-            mailMotoru.MailGonder(mailBilgi);
+            MailGonderimSonuc mailGonderimSonuc = mailMotoru.MailGonder(mailBilgi);
 
-            Console.WriteLine("----Mail gönderildi.");
+            if(mailGonderimSonuc.Basarili)
+                Console.WriteLine("----Mail gönderildi.");
+            else
+                Console.WriteLine("----Mail gönderimi başarısız.");
 
             _channel.BasicAck(deliveryTag, false);
 
